@@ -1,0 +1,26 @@
+
+<view class="container">
+
+    <view class="header">
+        <text>{{title}}</text>
+    </view>
+    <view class="list">
+            <view class="list-item"  wx:for="{{list}}">
+                <navigator >
+
+                <image src="{{item.images.small}}"></image>
+                </navigator>
+
+                <view class="info">
+                    <text class="tilte">{{item.title}}</text>
+                    <text>{{item.original_title}}({{item.year}})</text>
+                    <text>导演:
+                        <block wx:for="{{item.directors}}">
+                            {{item.name}}
+                        </block>
+                    </text>
+                </view>
+            </view>
+    </view>
+</view>
+
